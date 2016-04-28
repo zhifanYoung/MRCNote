@@ -41,3 +41,7 @@ error ：RACSignal 通过 error 事件向订阅者表明信号在正常结束前
 completed ：RACSignal 通过 completed 事件向订阅者表明信号已经正常结束，不会再有后续的值传送给订阅者。
 * 
 注意，ReactiveCocoa 中的值流只包含正常的值，即通过 next 事件传送的值，并不包括 error 和 completed 事件，它们需要被特殊处理。通常情况下，一个信号的生命周期是由任意个 next 事件和一个 error 事件或一个 completed 事件组成的。
+
+## 
+map方法，根据原信号创建了一个新的信号，并且变换了信号的输出值。这两个信号具有明显的先后顺序关系。而flattenMap方法，直接生成了一个新的信号，这两个信号并没有先后顺序关系，属于同层次的平行关系
+
